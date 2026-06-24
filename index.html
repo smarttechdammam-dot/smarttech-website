@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartTech Security Solutions | Protect What Matters Most | Dammam Saudi Arabia</title>
+<meta name="description" content="SmartTech Security Solutions - Premium CCTV Installation, Smart Home Automation, Video Intercom, Access Control, Fire Alarm Systems, and Networking Solutions in Dammam, Saudi Arabia.">
+<meta name="keywords" content="CCTV Installation Saudi Arabia, Smart Home Automation Saudi Arabia, Video Intercom Systems, Access Control Systems, Fire Alarm Systems, Networking WiFi Solutions, Security Systems Dammam">
+<meta name="author" content="SmartTech Security Solutions">
+<meta property="og:title" content="SmartTech Security Solutions - Protect What Matters Most">
+<meta property="og:description" content="Advanced Security & Smart Technology Solutions in Saudi Arabia">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.16/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cairo@5.0.18/index.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+  :root {
+    --primary-white: #ffffff;
+    --primary-silver: #c0c5cc;
+    --accent-blue: #0a2540;
+    --accent-blue-light: #1a3a5c;
+    --silver-gradient: linear-gradient(135deg, #e8ecef 0%, #c0c5cc 50%, #e8ecef 100%);
+  }
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #ffffff;
+    color: #0a2540;
+    overflow-x: hidden;
+  }
+  body.rtl { font-family: 'Cairo', 'Inter', sans-serif; direction: rtl; }
+  .font-display { font-weight: 800; letter-spacing: -0.02em; }
+  .text-gradient { background: linear-gradient(135deg, #0a2540 0%, #1a3a5c 50%, #2d5a87 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .silver-gradient { background: linear-gradient(135deg, #f8f9fa 0%, #e8ecef 50%, #d0d5db 100%); }
+  .blue-gradient { background: linear-gradient(135deg, #0a2540 0%, #1a3a5c 100%); }
+  .glass { background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.3); }
+  .glass-dark { background: rgba(10,37,64,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+  .hero-overlay { background: linear-gradient(135deg, rgba(10,37,64,0.75) 0%, rgba(10,37,64,0.4) 50%, rgba(10,37,64,0.6) 100%); }
+  .btn-primary {
+    background: linear-gradient(135deg, #0a2540 0%, #1a3a5c 100%);
+    color: white;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.6s;
+  }
+  .btn-primary:hover::before { left: 100%; }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 20px 40px rgba(10,37,64,0.3); }
+  .btn-outline {
+    border: 2px solid #0a2540;
+    color: #0a2540;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-outline:hover { background: #0a2540; color: white; transform: translateY(-2px); }
+  .btn-whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 20px 40px rgba(37,211,102,0.3); }
+  .card-hover { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+  .card-hover:hover { transform: translateY(-8px); box-shadow: 0 30px 60px rgba(10,37,64,0.15); }
+  .nav-link { position: relative; transition: color 0.3s; }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 0; height: 2px;
+    background: #0a2540;
+    transition: width 0.3s;
+  }
+  body.rtl .nav-link::after { left: auto; right: 0; }
+  .nav-link:hover::after { width: 100%; }
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c0c5cc, transparent);
+  }
+  .floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 64px; height: 64px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 10px 30px rgba(37,211,102,0.4);
+    z-index: 100;
+    animation: pulse 2s infinite;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  body.rtl .floating-whatsapp { right: auto; left: 30px; }
+  .floating-whatsapp:hover { transform: scale(1.1); }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 10px 30px rgba(37,211,102,0.4); }
+    50% { box-shadow: 0 10px 30px rgba(37,211,102,0.7), 0 0 0 10px rgba(37,211,102,0.1); }
+  }
+  .tech-grid {
+    background-image: 
+      linear-gradient(rgba(10,37,64,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(10,37,64,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .network-line {
+    position: absolute;
+    background: linear-gradient(90deg, transparent, #0a2540, transparent);
+    height: 1px;
+    opacity: 0.3;
+  }
+  .counter-value { font-variant-numeric: tabular-nums; }
+  .cctv-camera-container {
+    position: sticky;
+    top: 20vh;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cctv-camera {
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.1s linear;
+    filter: drop-shadow(0 30px 60px rgba(10,37,64,0.3));
+  }
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  @media (max-width: 768px) {
+    .parallax-bg { background-attachment: scroll; }
+    .floating-whatsapp { width: 56px; height: 56px; bottom: 20px; right: 20px; }
+    body.rtl .floating-whatsapp { right: auto; left: 20px; }
+  }
+  .fade-up { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+  .fade-left { opacity: 0; transform: translateX(-40px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+  .fade-left.visible { opacity: 1; transform: translateX(0); }
+  .fade-right { opacity: 0; transform: translateX(40px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+  body.rtl .fade-right { transform: translateX(-40px); }
+  .fade-right.visible { opacity: 1; transform: translateX(0); }
+  .scale-in { opacity: 0; transform: scale(0.9); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+  .scale-in.visible { opacity: 1; transform: scale(1); }
+  .input-field {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #e0e4e8;
+    border-radius: 8px;
+    background: white;
+    transition: all 0.3s;
+    font-size: 15px;
+  }
+  .input-field:focus {
+    outline: none;
+    border-color: #0a2540;
+    box-shadow: 0 0 0 4px rgba(10,37,64,0.08);
+  }
+  .service-icon {
+    width: 64px; height: 64px;
+    background: linear-gradient(135deg, #0a2540 0%, #1a3a5c 100%);
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    color: white;
+    font-size: 28px;
+    transition: all 0.4s;
+  }
+  .card-hover:hover .service-icon { transform: rotate(-5deg) scale(1.05); }
+  .mobile-menu {
+    position: fixed;
+    top: 0; right: 0;
+    width: 100%; height: 100vh;
+    background: rgba(10,37,64,0.98);
+    backdrop-filter: blur(20px);
+    z-index: 90;
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  body.rtl .mobile-menu { right: auto; left: 0; transform: translateX(-100%); }
+  .mobile-menu.open { transform: translateX(0); }
+  .mobile-menu.open body.rtl { transform: translateX(0); }
+  .scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(10px); }
+  }
+  .hero-particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .particle {
+    position: absolute;
+    width: 4px; height: 4px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    animation: float 8s infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+    10%, 90% { opacity: 1; }
+    100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
+  }
+  .clients-carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .clients-carousel::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    background: linear-gradient(90deg, white 0%, rgba(255,255,255,0) 100%);
+    z-index: 10;
+    pointer-events: none;
+  }
+  .clients-carousel::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    background: linear-gradient(270deg, white 0%, rgba(255,255,255,0) 100%);
+    z-index: 10;
+    pointer-events: none;
+  }
+  .clients-track {
+    display: flex;
+    gap: 24px;
+    animation: scroll-clients 40s linear infinite;
+  }
+  @keyframes scroll-clients {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% / 2)); }
+  }
+  .clients-track:hover {
+    animation-play-state: paused;
+  }
+  .client-card {
+    flex: 0 0 280px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8ecef 50%, #d0d5db 100%);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    border: 1px solid #e8ecef;
+    box-shadow: 0 4px 12px rgba(10,37,64,0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .client-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(10,37,64,0.15);
+  }
+  .map-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border: 0;
+  }
+  .lang-switch {
+    cursor: pointer;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(10,37,64,0.2);
+    transition: all 0.3s;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .lang-switch:hover { background: #0a2540; color: white; border-color: #0a2540; }
+  .lang-switch.active { background: #0a2540; color: white; border-color: #0a2540; }
+  .section-label {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(10,37,64,0.08);
+    color: #0a2540;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+  }
+  .benefit-check {
+    width: 24px; height: 24px;
+    background: linear-gradient(135deg, #0a2540 0%, #1a3a5c 100%);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: white;
+    flex-shrink: 0;
+  }
+  .industry-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+  }
+  .industry-card img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .industry-card:hover img { transform: scale(1.1); }
+  .industry-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(10,37,64,0.9) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 24px;
+    transition: all 0.4s;
+  }
+  .industry-card:hover .overlay { background: linear-gradient(180deg, rgba(10,37,64,0.3) 0%, rgba(10,37,64,0.95) 100%); }
+  .network-anim {
+    position: relative;
+    height: 400px;
+  }
+  .network-node {
+    position: absolute;
+    width: 16px; height: 16px;
+    background: #0a2540;
+    border-radius: 50%;
+    animation: nodePulse 2s infinite;
+  }
+  @keyframes nodePulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(10,37,64,0.4); }
+    50% { transform: scale(1.2); box-shadow: 0 0 0 10px rgba(10,37,64,0); }
+  }
+  .network-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+  }
+  .network-svg line {
+    stroke: #0a2540;
+    stroke-width: 1;
+    opacity: 0.2;
+    stroke-dasharray: 5,5;
+    animation: dash 20s linear infinite;
+  }
+  @keyframes dash { to { stroke-dashoffset: -100; } }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="#home" class="flex items-center gap-3">
+        <img src="images/logo/Smarttech-logo.png" alt="SmartTech Logo" class="w-12 h-12 rounded-lg object-cover">
+        <div>
+          <div class="font-display text-3xl leading-tight" data-i18n="companyName">SmartTech</div>
+          <div class="text-base text-gray-500 leading-tight" data-i18n="companySub">Security Solutions</div>
+        </div>
+      </a>
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="#home" class="nav-link text-sm font-medium" data-i18n="navHome">Home</a>
+        <a href="#services" class="nav-link text-sm font-medium" data-i18n="navServices">Services</a>
+        <a href="#why" class="nav-link text-sm font-medium" data-i18n="navWhy">Why Us</a>
+        <a href="#industries" class="nav-link text-sm font-medium" data-i18n="navIndustries">Industries</a>
+        <a href="#clients" class="nav-link text-sm font-medium" data-i18n="navClients">Clients</a>
+        <a href="#contact" class="nav-link text-sm font-medium" data-i18n="navContact">Contact</a>
+        <div class="flex items-center gap-2">
+          <button class="lang-switch" data-lang="en">EN</button>
+          <button class="lang-switch" data-lang="ar">عربي</button>
+        </div>
+        <a href="#quote" class="btn-primary px-6 py-3 rounded-lg text-sm font-semibold" data-i18n="navQuote">Request Quote</a>
+      </div>
+      <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 flex items-center justify-center">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2">
+          <path d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="mobile-menu lg:hidden flex flex-col items-center justify-center gap-8">
+  <button id="closeMobileMenu" class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+      <path d="M18 6L6 18M6 6l12 12"/>
+    </svg>
+  </button>
+  <a href="#home" class="mobile-link text-white text-2xl font-semibold" data-i18n="navHome">Home</a>
+  <a href="#services" class="mobile-link text-white text-2xl font-semibold" data-i18n="navServices">Services</a>
+  <a href="#why" class="mobile-link text-white text-2xl font-semibold" data-i18n="navWhy">Why Us</a>
+  <a href="#industries" class="mobile-link text-white text-2xl font-semibold" data-i18n="navIndustries">Industries</a>
+  <a href="#clients" class="mobile-link text-white text-2xl font-semibold" data-i18n="navClients">Clients</a>
+  <a href="#contact" class="mobile-link text-white text-2xl font-semibold" data-i18n="navContact">Contact</a>
+  <div class="flex gap-3 mt-4">
+    <button class="lang-switch text-white border-white" data-lang="en">EN</button>
+    <button class="lang-switch text-white border-white" data-lang="ar">عربي</button>
+  </div>
+  <a href="#quote" class="btn-primary px-8 py-4 rounded-lg text-lg font-semibold mt-4" data-i18n="navQuote">Request Quote</a>
+</div>
+
+<!-- HERO SECTION -->
+<section id="home" class="relative min-h-screen flex items-center overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="https://image.qwenlm.ai/public_source/0856f7e5-e2fc-4f9a-93cd-478f6b48a6e3/16b9e42b2-f832-4deb-9991-086ef4101ae4.png" alt="SmartTech Security Solutions" class="w-full h-full object-cover">
+    <div class="hero-overlay absolute inset-0"></div>
+  </div>
+  <div class="hero-particles" id="heroParticles"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 lg:py-40 w-full">
+    <div class="max-w-4xl">
+      <div class="fade-up inline-block mb-6">
+        <span class="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-sm font-medium">
+          <span data-i18n="heroLabel">Trusted Security Partner in Saudi Arabia</span>
+        </span>
+      </div>
+      <h1 class="fade-up font-display text-5xl md:text-7xl lg:text-8xl text-white leading-[0.95] mb-6">
+        <span data-i18n="heroTitle1">Protect What</span><br>
+        <span class="italic font-light" data-i18n="heroTitle2">Matters Most</span>
+      </h1>
+      <p class="fade-up text-xl md:text-2xl text-white/90 mb-10 max-w-2xl font-light" data-i18n="heroSubtitle">
+        Advanced Security & Smart Technology Solutions
+      </p>
+      <div class="fade-up flex flex-wrap gap-4">
+        <a href="#quote" class="btn-primary px-8 py-4 rounded-lg font-semibold text-base" data-i18n="heroCta1">Request a Quote</a>
+        <a href="#contact" class="btn-outline px-8 py-4 rounded-lg font-semibold text-base bg-white/10 backdrop-blur-md border-white/30 text-white hover:bg-white hover:text-[#0a2540]" data-i18n="heroCta2">Contact Us</a>
+        <a href="https://wa.me/966551716665?text=Hello%20SmartTech%2C%20I%20would%20like%20to%20request%20a%20quotation." target="_blank" class="btn-whatsapp px-8 py-4 rounded-lg font-semibold text-base flex items-center gap-2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          <span data-i18n="heroCta3">WhatsApp Us</span>
+        </a>
+      </div>
+      <div class="fade-up grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-white/20 max-w-xl">
+        <div>
+          <div class="counter-value font-display text-3xl md:text-4xl text-white" data-target="500">0</div>
+          <div class="text-white/70 text-sm mt-1" data-i18n="statProjects">Projects Delivered</div>
+        </div>
+        <div>
+          <div class="counter-value font-display text-3xl md:text-4xl text-white" data-target="24">0</div>
+          <div class="text-white/70 text-sm mt-1" data-i18n="statSupport">/7 Support</div>
+        </div>
+        <div>
+          <div class="counter-value font-display text-3xl md:text-4xl text-white" data-target="100">0</div>
+          <div class="text-white/70 text-sm mt-1" data-i18n="statClients">Satisfied Clients</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+  </div>
+</section>
+
+<!-- CCTV SECTION -->
+<section id="services" class="relative py-24 lg:py-32 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="fade-left">
+        <span class="section-label mb-6" data-i18n="cctvLabel">01 — Surveillance</span>
+        <h2 class="font-display text-4xl md:text-6xl text-gradient leading-tight mt-4 mb-6" data-i18n="cctvTitle">CCTV Surveillance Systems</h2>
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed" data-i18n="cctvDesc">
+          Professional-grade surveillance solutions designed for residential, commercial, and industrial environments. Our systems deliver crystal-clear footage with intelligent analytics.
+        </p>
+        <div class="space-y-3">
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="cctvB1">24/7 Monitoring</span></div>
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="cctvB2">Remote Viewing</span></div>
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="cctvB3">Night Vision</span></div>
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="cctvB4">Smart Detection</span></div>
+        </div>
+      </div>
+      <div class="fade-right relative">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+          <img src="https://images.ctfassets.net/5kq8dse7hipf/4eJLczNyidAQoVigTQ5Y4d/b4f021a4e6ba4bb448b494fbe87ee92e/How-to-add-a-security-system-Featured.jpg?w=1024&fm=webp" alt="CCTV Camera" class="w-full h-[500px] object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0a2540]/40 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6 flex items-center gap-3">
+            <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+            <span class="text-white text-sm font-medium" data-i18n="cctvLive">Live Monitoring Active</span>
+          </div>
+        </div>
+        <div class="absolute -top-6 -right-6 w-24 h-24 bg-[#0a2540]/10 rounded-full blur-2xl"></div>
+        <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-gray-200/50 rounded-full blur-2xl"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider max-w-7xl mx-auto"></div>
+
+<!-- SMART HOME SECTION -->
+<section class="relative py-24 lg:py-32 silver-gradient overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="fade-left order-2 lg:order-1 relative">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+          <img src="https://image.qwenlm.ai/public_source/0856f7e5-e2fc-4f9a-93cd-478f6b48a6e3/129ca2dcf-043b-4e79-b04d-5fba01184b40.png" alt="Smart Home" class="w-full h-[500px] object-cover">
+          <div class="absolute top-6 right-6 glass px-4 py-3 rounded-xl flex items-center gap-2">
+            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+            <span class="text-sm font-medium text-[#0a2540]" data-i18n="smartStatus">System Active</span>
+          </div>
+        </div>
+      </div>
+      <div class="fade-right order-1 lg:order-2">
+        <span class="section-label mb-6" data-i18n="smartLabel">02 — Automation</span>
+        <h2 class="font-display text-4xl md:text-6xl text-gradient leading-tight mt-4 mb-6" data-i18n="smartTitle">Smart Home Automation</h2>
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed" data-i18n="smartDesc">
+          Transform your living space into an intelligent environment. Control lighting, climate, curtains, and security from a single elegant interface.
+        </p>
+        <div class="space-y-3">
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="smartB1">Comfort</span></div>
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="smartB2">Convenience</span></div>
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="smartB3">Energy Efficiency</span></div>
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="smartB4">Modern Living</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider max-w-7xl mx-auto"></div>
+
+<!-- VIDEO INTERCOM SECTION -->
+<section class="relative py-24 lg:py-32 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="fade-left">
+        <span class="section-label mb-6" data-i18n="intercomLabel">03 — Communication</span>
+        <h2 class="font-display text-4xl md:text-6xl text-gradient leading-tight mt-4 mb-6" data-i18n="intercomTitle">Video Intercom Systems</h2>
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed" data-i18n="intercomDesc">
+          See, speak, and grant access to visitors from anywhere. Our premium video intercom solutions combine elegant design with powerful functionality.
+        </p>
+        <div class="space-y-3">
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="intercomB1">See Visitors</span></div>
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="intercomB2">Speak Instantly</span></div>
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="intercomB3">Remote Access</span></div>
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="intercomB4">Enhanced Security</span></div>
+        </div>
+      </div>
+      <div class="fade-right relative">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+          <img src="https://www.aiphone.com/wp-content/uploads/JO_AnsweringStation_Wman.jpg" alt="Video Intercom" class="w-full h-[500px] object-cover">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider max-w-7xl mx-auto"></div>
+
+<!-- ACCESS CONTROL SECTION -->
+<section class="relative py-24 lg:py-32 silver-gradient overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="fade-left order-2 lg:order-1 relative">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+          <img src="https://getsafeandsound.com/wp-content/uploads/2023/02/How-to-Install-a-Fingerprint-Access-Control-System.jpg" alt="Access Control" class="w-full h-[500px] object-cover">
+        </div>
+      </div>
+      <div class="fade-right order-1 lg:order-2">
+        <span class="section-label mb-6" data-i18n="accessLabel">04 — Access Control</span>
+        <h2 class="font-display text-4xl md:text-6xl text-gradient leading-tight mt-4 mb-6" data-i18n="accessTitle">Access Control Systems</h2>
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed" data-i18n="accessDesc">
+          Advanced biometric and card-based access solutions that give you complete control over who enters your premises, with detailed audit trails.
+        </p>
+        <div class="space-y-3">
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="accessB1">Controlled Entry</span></div>
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="accessB2">Visitor Management</span></div>
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="accessB3">Attendance Tracking</span></div>
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="accessB4">Advanced Security</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider max-w-7xl mx-auto"></div>
+
+<!-- FIRE ALARM SECTION -->
+<section class="relative py-24 lg:py-32 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="fade-left">
+        <span class="section-label mb-6" data-i18n="fireLabel">05 — Safety</span>
+        <h2 class="font-display text-4xl md:text-6xl text-gradient leading-tight mt-4 mb-6" data-i18n="fireTitle">Fire Alarm Systems</h2>
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed" data-i18n="fireDesc">
+          Life-saving fire detection and alarm systems engineered for early warning and rapid response. Protecting lives and property with certified solutions.
+        </p>
+        <div class="space-y-3">
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="fireB1">Early Detection</span></div>
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="fireB2">Fast Alerts</span></div>
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="fireB3">Life Safety</span></div>
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="fireB4">Property Protection</span></div>
+        </div>
+      </div>
+      <div class="fade-right relative">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+          <img src="https://image.qwenlm.ai/public_source/0856f7e5-e2fc-4f9a-93cd-478f6b48a6e3/1ac01e4fb-6d2a-4f7c-be6b-0efaf8e89c65.png" alt="Fire Alarm" class="w-full h-[500px] object-cover">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider max-w-7xl mx-auto"></div>
+
+<!-- NETWORKING SECTION -->
+<section class="relative py-24 lg:py-32 silver-gradient overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="fade-left order-2 lg:order-1 relative">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+          <img src="https://image.qwenlm.ai/public_source/0856f7e5-e2fc-4f9a-93cd-478f6b48a6e3/118f18a76-4eac-4ec4-a10a-229140f1672f.png" alt="Networking" class="w-full h-[500px] object-cover">
+        </div>
+      </div>
+      <div class="fade-right order-1 lg:order-2">
+        <span class="section-label mb-6" data-i18n="networkLabel">06 — Connectivity</span>
+        <h2 class="font-display text-4xl md:text-6xl text-gradient leading-tight mt-4 mb-6" data-i18n="networkTitle">Networking & WiFi Solutions</h2>
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed" data-i18n="networkDesc">
+          Enterprise-grade networking infrastructure designed for reliability and performance. From structured cabling to wireless coverage, we build the foundation of your digital operations.
+        </p>
+        <div class="space-y-3">
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="networkB1">Reliable Connectivity</span></div>
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="networkB2">Enterprise WiFi</span></div>
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="networkB3">Structured Cabling</span></div>
+          <div class="benefit-item"><div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><span class="font-medium" data-i18n="networkB4">High-Speed Performance</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why" class="relative py-24 lg:py-32 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="section-label mb-6" data-i18n="whyLabel">Why SmartTech</span>
+      <h2 class="font-display text-4xl md:text-6xl text-gradient leading-tight mt-4" data-i18n="whyTitle">Why Choose SmartTech</h2>
+      <p class="text-lg text-gray-600 mt-6 max-w-2xl mx-auto" data-i18n="whyDesc">We deliver excellence at every stage — from initial consultation to ongoing support.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="card-hover p-8 rounded-2xl bg-gray-50 border border-gray-100 fade-up">
+        <div class="service-icon mb-6"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3 class="font-display text-xl mb-3" data-i18n="why1Title">Professional Installation</h3>
+        <p class="text-gray-600" data-i18n="why1Desc">Certified technicians with years of experience delivering flawless installations.</p>
+      </div>
+      <div class="card-hover p-8 rounded-2xl bg-gray-50 border border-gray-100 fade-up">
+        <div class="service-icon mb-6"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v5c0 5 3.5 9.5 9 11 5.5-1.5 9-6 9-11V7l-9-5z"/></svg></div>
+        <h3 class="font-display text-xl mb-3" data-i18n="why2Title">Quality Products</h3>
+        <p class="text-gray-600" data-i18n="why2Desc">Premium equipment from globally trusted brands with full warranty coverage.</p>
+      </div>
+      <div class="card-hover p-8 rounded-2xl bg-gray-50 border border-gray-100 fade-up">
+        <div class="service-icon mb-6"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+        <h3 class="font-display text-xl mb-3" data-i18n="why3Title">Reliable Support</h3>
+        <p class="text-gray-600" data-i18n="why3Desc">Dedicated support team available to assist you whenever you need us.</p>
+      </div>
+      <div class="card-hover p-8 rounded-2xl bg-gray-50 border border-gray-100 fade-up">
+        <div class="service-icon mb-6"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg></div>
+        <h3 class="font-display text-xl mb-3" data-i18n="why4Title">Customized Solutions</h3>
+        <p class="text-gray-600" data-i18n="why4Desc">Tailored designs that perfectly match your specific requirements and environment.</p>
+      </div>
+      <div class="card-hover p-8 rounded-2xl bg-gray-50 border border-gray-100 fade-up">
+        <div class="service-icon mb-6"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3 class="font-display text-xl mb-3" data-i18n="why5Title">Latest Technology</h3>
+        <p class="text-gray-600" data-i18n="why5Desc">Cutting-edge systems that keep you ahead with the most advanced features.</p>
+      </div>
+      <div class="card-hover p-8 rounded-2xl bg-gray-50 border border-gray-100 fade-up">
+        <div class="service-icon mb-6"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+        <h3 class="font-display text-xl mb-3" data-i18n="why6Title">Customer Satisfaction</h3>
+        <p class="text-gray-600" data-i18n="why6Desc">Your satisfaction is our priority — measured by lasting relationships and referrals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section id="industries" class="relative py-24 lg:py-32 silver-gradient overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="section-label mb-6" data-i18n="indLabel">Industries</span>
+      <h2 class="font-display text-4xl md:text-6xl text-gradient leading-tight mt-4" data-i18n="indTitle">Industries We Serve</h2>
+      <p class="text-lg text-gray-600 mt-6 max-w-2xl mx-auto" data-i18n="indDesc">Comprehensive CCTV and security solutions tailored for diverse sectors and business needs</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white rounded-xl p-8 text-center card-hover fade-up border border-gray-200">
+        <span class="text-4xl block mb-4" data-i18n="ind1Icon">🏢</span>
+        <div class="w-8 h-1 bg-gradient-to-r from-[#0a2540] to-[#1a3a5c] rounded mx-auto mb-4"></div>
+        <h3 class="font-display text-lg text-[#0a2540] mb-2" data-i18n="ind1">Commercial & Corporate Offices</h3>
+        <p class="text-sm text-gray-600" data-i18n="ind1Desc">Advanced surveillance for office complexes, ensuring employee safety and asset protection with 24/7 monitoring.</p>
+      </div>
+      <div class="bg-white rounded-xl p-8 text-center card-hover fade-up border border-gray-200">
+        <span class="text-4xl block mb-4" data-i18n="ind2Icon">🛍️</span>
+        <div class="w-8 h-1 bg-gradient-to-r from-[#0a2540] to-[#1a3a5c] rounded mx-auto mb-4"></div>
+        <h3 class="font-display text-lg text-[#0a2540] mb-2" data-i18n="ind2">Retail & Shopping Centers</h3>
+        <p class="text-sm text-gray-600" data-i18n="ind2Desc">Prevent theft and ensure customer safety with strategically placed cameras and real-time monitoring systems.</p>
+      </div>
+      <div class="bg-white rounded-xl p-8 text-center card-hover fade-up border border-gray-200">
+        <span class="text-4xl block mb-4" data-i18n="ind3Icon">🏠</span>
+        <div class="w-8 h-1 bg-gradient-to-r from-[#0a2540] to-[#1a3a5c] rounded mx-auto mb-4"></div>
+        <h3 class="font-display text-lg text-[#0a2540] mb-2" data-i18n="ind3">Residential Villas & Apartments</h3>
+        <p class="text-sm text-gray-600" data-i18n="ind3Desc">Protect your home and loved ones with discreet yet powerful surveillance solutions for residential properties.</p>
+      </div>
+      <div class="bg-white rounded-xl p-8 text-center card-hover fade-up border border-gray-200">
+        <span class="text-4xl block mb-4" data-i18n="ind4Icon">🏭</span>
+        <div class="w-8 h-1 bg-gradient-to-r from-[#0a2540] to-[#1a3a5c] rounded mx-auto mb-4"></div>
+        <h3 class="font-display text-lg text-[#0a2540] mb-2" data-i18n="ind4">Industrial & Warehouses</h3>
+        <p class="text-sm text-gray-600" data-i18n="ind4Desc">Heavy-duty security systems for industrial facilities, monitoring equipment, inventory, and ensuring workplace safety.</p>
+      </div>
+      <div class="bg-white rounded-xl p-8 text-center card-hover fade-up border border-gray-200">
+        <span class="text-4xl block mb-4" data-i18n="ind5Icon">🎓</span>
+        <div class="w-8 h-1 bg-gradient-to-r from-[#0a2540] to-[#1a3a5c] rounded mx-auto mb-4"></div>
+        <h3 class="font-display text-lg text-[#0a2540] mb-2" data-i18n="ind5">Schools & Educational Institutions</h3>
+        <p class="text-sm text-gray-600" data-i18n="ind5Desc">Safeguard students and staff with comprehensive surveillance covering classrooms, corridors, and campus perimeters.</p>
+      </div>
+      <div class="bg-white rounded-xl p-8 text-center card-hover fade-up border border-gray-200">
+        <span class="text-4xl block mb-4" data-i18n="ind6Icon">🏥</span>
+        <div class="w-8 h-1 bg-gradient-to-r from-[#0a2540] to-[#1a3a5c] rounded mx-auto mb-4"></div>
+        <h3 class="font-display text-lg text-[#0a2540] mb-2" data-i18n="ind6">Hospitals & Healthcare Facilities</h3>
+        <p class="text-sm text-gray-600" data-i18n="ind6Desc">Critical surveillance for medical facilities ensuring patient safety, asset protection, and regulatory compliance.</p>
+      </div>
+      <div class="bg-white rounded-xl p-8 text-center card-hover fade-up border border-gray-200">
+        <span class="text-4xl block mb-4" data-i18n="ind7Icon">🏨</span>
+        <div class="w-8 h-1 bg-gradient-to-r from-[#0a2540] to-[#1a3a5c] rounded mx-auto mb-4"></div>
+        <h3 class="font-display text-lg text-[#0a2540] mb-2" data-i18n="ind7">Hotels & Hospitality</h3>
+        <p class="text-sm text-gray-600" data-i18n="ind7Desc">Ensure guest safety and property security with discreet monitoring of common areas and critical zones.</p>
+      </div>
+      <div class="bg-white rounded-xl p-8 text-center card-hover fade-up border border-gray-200">
+        <span class="text-4xl block mb-4" data-i18n="ind8Icon">🏗️</span>
+        <div class="w-8 h-1 bg-gradient-to-r from-[#0a2540] to-[#1a3a5c] rounded mx-auto mb-4"></div>
+        <h3 class="font-display text-lg text-[#0a2540] mb-2" data-i18n="ind8">Construction Sites</h3>
+        <p class="text-sm text-gray-600" data-i18n="ind8Desc">Protect valuable equipment and materials with rugged, weatherproof surveillance suitable for outdoor construction environments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE SECTION -->
+<section id="quote" class="relative py-24 lg:py-32 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="fade-left">
+        <span class="section-label mb-6" data-i18n="quoteLabel">Get Started</span>
+        <h2 class="font-display text-4xl md:text-6xl text-gradient leading-tight mt-4 mb-6" data-i18n="quoteTitle">Request a Quote</h2>
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed" data-i18n="quoteDesc">
+          Tell us about your project. Our team will respond within 24 hours with a customized proposal tailored to your needs.
+        </p>
+        <div class="space-y-4">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl blue-gradient flex items-center justify-center text-white flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="text-sm text-gray-500" data-i18n="quoteCall">Call us directly</div>
+              <div class="font-semibold">+966 55 171 6665</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl blue-gradient flex items-center justify-center text-white flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="text-sm text-gray-500" data-i18n="quoteEmail">Email us</div>
+              <div class="font-semibold">smarttechdammam@gmail.com</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#25D366] to-[#128C7E] flex items-center justify-center text-white flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </div>
+            <div>
+              <div class="text-sm text-gray-500" data-i18n="quoteWhatsapp">WhatsApp</div>
+              <div class="font-semibold">+966 55 171 6665</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fade-right">
+        <form id="quoteForm" class="bg-gray-50 rounded-2xl p-8 lg:p-10 border border-gray-100">
+          <div class="grid md:grid-cols-2 gap-5 mb-5">
+            <div>
+              <label class="block text-sm font-semibold mb-2" data-i18n="formName">Name</label>
+              <input type="text" required class="input-field" data-i18n-placeholder="formNamePh" placeholder="Your full name">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2" data-i18n="formPhone">Phone Number</label>
+              <input type="tel" required class="input-field" data-i18n-placeholder="formPhonePh" placeholder="+966 5X XXX XXXX">
+            </div>
+          </div>
+          <div class="mb-5">
+            <label class="block text-sm font-semibold mb-2" data-i18n="formEmail">Email</label>
+            <input type="email" required class="input-field" data-i18n-placeholder="formEmailPh" placeholder="your@email.com">
+          </div>
+          <div class="mb-5">
+            <label class="block text-sm font-semibold mb-2" data-i18n="formService">Service Required</label>
+            <select required class="input-field">
+              <option value="" data-i18n="formServicePh">Select a service</option>
+              <option data-i18n="optCctv">CCTV Surveillance</option>
+              <option data-i18n="optSmart">Smart Home Automation</option>
+              <option data-i18n="optIntercom">Video Intercom</option>
+              <option data-i18n="optAccess">Access Control</option>
+              <option data-i18n="optGate">Automatic Gate Systems</option>
+              <option data-i18n="optFire">Fire Alarm Systems</option>
+              <option data-i18n="optNetwork">Networking & WiFi</option>
+            </select>
+          </div>
+          <div class="mb-5">
+            <label class="block text-sm font-semibold mb-2" data-i18n="formLocation">Location</label>
+            <input type="text" required class="input-field" data-i18n-placeholder="formLocationPh" placeholder="City / Area">
+          </div>
+          <div class="mb-6">
+            <label class="block text-sm font-semibold mb-2" data-i18n="formMessage">Message</label>
+            <textarea rows="4" class="input-field" data-i18n-placeholder="formMessagePh" placeholder="Tell us about your project..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary w-full py-4 rounded-lg font-semibold" data-i18n="formSubmit">Submit Request</button>
+          <div id="formSuccess" class="hidden mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-center" data-i18n="formSuccess">Thank you! We'll contact you within 24 hours.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="relative py-24 lg:py-32 silver-gradient overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="section-label mb-6" data-i18n="contactLabel">Contact</span>
+      <h2 class="font-display text-4xl md:text-6xl text-gradient leading-tight mt-4" data-i18n="contactTitle">Get in Touch</h2>
+      <p class="text-lg text-gray-600 mt-6 max-w-2xl mx-auto" data-i18n="contactDesc">Visit us, call us, or send a message — we're here to help.</p>
+    </div>
+    <div class="grid lg:grid-cols-3 gap-8 mb-12">
+      <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 fade-up">
+        <div class="w-14 h-14 rounded-2xl blue-gradient flex items-center justify-center text-white mb-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="font-display text-lg mb-2" data-i18n="contactLocTitle">Location</h3>
+        <p class="text-gray-600" data-i18n="contactLoc">Dammam, Saudi Arabia</p>
+      </div>
+      <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 fade-up">
+        <div class="w-14 h-14 rounded-2xl blue-gradient flex items-center justify-center text-white mb-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <h3 class="font-display text-lg mb-2" data-i18n="contactPhoneTitle">Phone</h3>
+        <p class="text-gray-600">+966 55 171 6665</p>
+        <p class="text-gray-600">+966 50 664 2275</p>
+      </div>
+      <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 fade-up">
+        <div class="w-14 h-14 rounded-2xl blue-gradient flex items-center justify-center text-white mb-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h3 class="font-display text-lg mb-2" data-i18n="contactEmailTitle">Email</h3>
+        <p class="text-gray-600 break-all">smarttechdammam@gmail.com</p>
+      </div>
+    </div>
+    <div class="map-container shadow-2xl fade-up">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224446.1636185599!2d49.9775!3d26.4207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e35a1f7e8f1f1f1%3A0x1234567890abcdef!2sDammam!5e0!3m2!1sen!2ssa!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- OUR CLIENTS -->
+<section id="clients" class="relative py-24 lg:py-32 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="section-label mb-6" data-i18n="clientsLabel">Trusted Partners</span>
+      <h2 class="font-display text-4xl md:text-6xl text-gradient leading-tight mt-4" data-i18n="clientsTitle">Our Clients</h2>
+      <p class="text-lg text-gray-600 mt-6 max-w-2xl mx-auto" data-i18n="clientsDesc">We proudly serve leading organizations across various sectors in Saudi Arabia and beyond.</p>
+    </div>
+    <div class="clients-carousel">
+      <div class="clients-track">
+        <!-- Client 1 -->
+        <div class="client-card">
+          <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center shadow-md">
+            <img src="images/clients logo/grand-mart.png" alt="Client Logo" class="w-14 h-14 object-contain">
+          </div>
+          <h3 class="font-display text-lg text-[#0a2540] mb-1">Grand Mart</h3>
+          <p class="text-sm text-gray-600">Dammam, Saudi Arabia</p>
+        </div>
+
+        <!-- Client 2 -->
+        <div class="client-card">
+          <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center shadow-md">
+            <img src="images/clients logo/badr.png" alt="Client Logo" class="w-14 h-14 object-contain">
+          </div>
+          <h3 class="font-display text-lg text-[#0a2540] mb-1">Badr Medical Group</h3>
+          <p class="text-sm text-gray-600">Dammam, Saudi Arabia</p>
+        </div>
+
+        <!-- Client 3 -->
+        <div class="client-card">
+          <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center shadow-md">
+            <img src="images/clients logo/abdul-wahid.png" alt="Client Logo" class="w-14 h-14 object-contain">
+          </div>
+          <h3 class="font-display text-lg text-[#0a2540] mb-1">Abdul Wahed.com</h3>
+          <p class="text-sm text-gray-600">Al Khobar, Saudi Arabia</p>
+        </div>
+
+        <!-- Client 4 -->
+        <div class="client-card">
+          <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center shadow-md">
+            <img src="images/clients logo/safa.png" alt="Client Logo" class="w-14 h-14 object-contain">
+          </div>
+          <h3 class="font-display text-lg text-[#0a2540] mb-1">Safa Medical Center</h3>
+          <p class="text-sm text-gray-600">Dammam, Saudi Arabia</p>
+        </div>
+
+        <!-- Client 5 -->
+        <div class="client-card">
+          <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center shadow-md">
+            <img src="images/clients logo/dar-as-shiha.png" alt="Client Logo" class="w-14 h-14 object-contain">
+          </div>
+          <h3 class="font-display text-lg text-[#0a2540] mb-1">Dar As Sihha Medical Center</h3>
+          <p class="text-sm text-gray-600">Dammam, Saudi Arabia</p>
+        </div>
+
+        <!-- Duplicate clients for seamless loop -->
+        <!-- Client 1 -->
+        <div class="client-card">
+          <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center shadow-md">
+            <img src="images/clients logo/grand-mart.png" alt="Client Logo" class="w-14 h-14 object-contain">
+          </div>
+          <h3 class="font-display text-lg text-[#0a2540] mb-1">Grand Mart</h3>
+          <p class="text-sm text-gray-600">Dammam, Saudi Arabia</p>
+        </div>
+
+        <!-- Client 2 -->
+        <div class="client-card">
+          <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center shadow-md">
+            <img src="images/clients logo/badr.png" alt="Client Logo" class="w-14 h-14 object-contain">
+          </div>
+          <h3 class="font-display text-lg text-[#0a2540] mb-1">Badr Medical Group</h3>
+          <p class="text-sm text-gray-600">Dammam, Saudi Arabia</p>
+        </div>
+
+        <!-- Client 3 -->
+        <div class="client-card">
+          <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center shadow-md">
+            <img src="images/clients logo/abdul-wahid.png" alt="Client Logo" class="w-14 h-14 object-contain">
+          </div>
+          <h3 class="font-display text-lg text-[#0a2540] mb-1">Abdul Wahed.com</h3>
+          <p class="text-sm text-gray-600">Al Khobar, Saudi Arabia</p>
+        </div>
+
+        <!-- Client 4 -->
+        <div class="client-card">
+          <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center shadow-md">
+            <img src="images/clients logo/safa.png" alt="Client Logo" class="w-14 h-14 object-contain">
+          </div>
+          <h3 class="font-display text-lg text-[#0a2540] mb-1">Safa Medical Center</h3>
+          <p class="text-sm text-gray-600">Dammam, Saudi Arabia</p>
+        </div>
+
+        <!-- Client 5 -->
+        <div class="client-card">
+          <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center shadow-md">
+            <img src="images/clients logo/dar-as-shiha.png" alt="Client Logo" class="w-14 h-14 object-contain">
+          </div>
+          <h3 class="font-display text-lg text-[#0a2540] mb-1">Dar As Sihha Medical Center</h3>
+          <p class="text-sm text-gray-600">Dammam, Saudi Arabia</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[#0a2540] text-white py-16">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <div>
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+            <img src="images/logo/Smarttech-logo.png" alt="SmartTech Logo" class="w-full h-full rounded-lg object-cover">
+          </div>
+          <div>
+            <div class="font-display text-xl leading-tight">SmartTech</div>
+            <div class="text-sm text-white/60 leading-tight" data-i18n="companySub">Security Solutions</div>
+          </div>
+        </div>
+        <p class="text-white/70 text-sm leading-relaxed" data-i18n="footerTagline">Protect What Matters Most — Advanced Security & Smart Technology Solutions across Saudi Arabia.</p>
+      </div>
+      <div>
+        <h4 class="font-display text-sm uppercase tracking-wider mb-5" data-i18n="footerLinks">Quick Links</h4>
+        <ul class="space-y-3 text-sm text-white/70">
+          <li><a href="#home" class="hover:text-white transition" data-i18n="navHome">Home</a></li>
+          <li><a href="#services" class="hover:text-white transition" data-i18n="navServices">Services</a></li>
+          <li><a href="#why" class="hover:text-white transition" data-i18n="navWhy">Why Us</a></li>
+          <li><a href="#industries" class="hover:text-white transition" data-i18n="navIndustries">Industries</a></li>
+          <li><a href="#contact" class="hover:text-white transition" data-i18n="navContact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-display text-sm uppercase tracking-wider mb-5" data-i18n="footerServices">Services</h4>
+        <ul class="space-y-3 text-sm text-white/70">
+          <li data-i18n="optCctv">CCTV Surveillance</li>
+          <li data-i18n="optSmart">Smart Home Automation</li>
+          <li data-i18n="optIntercom">Video Intercom</li>
+          <li data-i18n="optAccess">Access Control</li>
+          <li data-i18n="optFire">Fire Alarm Systems</li>
+          <li data-i18n="optNetwork">Networking & WiFi</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-display text-sm uppercase tracking-wider mb-5" data-i18n="footerContact">Contact</h4>
+        <ul class="space-y-3 text-sm text-white/70">
+          <li data-i18n="contactLoc">Dammam, Saudi Arabia</li>
+          <li>+966 55 171 6665</li>
+          <li>+966 50 664 2275</li>
+          <li class="break-all">smarttechdammam@gmail.com</li>
+        </ul>
+        <div class="flex gap-3 mt-5">
+          <a href="https://wa.me/966551716665?text=Hello%20SmartTech%2C%20I%20would%20like%20to%20request%20a%20quotation." target="_blank" class="w-10 h-10 rounded-lg bg-white/10 hover:bg-[#25D366] flex items-center justify-center transition">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </a>
+          <a href="tel:+966551716665" class="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-white/50 text-sm">© 2026 SmartTech Security Solutions. <span data-i18n="footerRights">All rights reserved.</span></p>
+      <p class="text-white/50 text-sm" data-i18n="footerMade">Made with precision in Dammam, Saudi Arabia</p>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/966551716665?text=Hello%20SmartTech%2C%20I%20would%20like%20to%20request%20a%20quotation." target="_blank" class="floating-whatsapp" aria-label="WhatsApp">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+// TRANSLATIONS
+const translations = {
+  en: {
+    companyName: "SmartTech",
+    companySub: "Security Solutions",
+    navHome: "Home",
+    navServices: "Services",
+    navWhy: "Why Us",
+    navIndustries: "Industries",
+    navClients: "Clients",
+    navContact: "Contact",
+    navQuote: "Request Quote",
+    heroLabel: "Trusted Security Partner in Saudi Arabia",
+    heroTitle1: "Protect What",
+    heroTitle2: "Matters Most",
+    heroSubtitle: "Advanced Security & Smart Technology Solutions",
+    heroCta1: "Request a Quote",
+    heroCta2: "Contact Us",
+    heroCta3: "WhatsApp Us",
+    statProjects: "Projects Delivered",
+    statSupport: "/7 Support",
+    statClients: "Satisfied Clients",
+    cctvLabel: "01 — Surveillance",
+    cctvTitle: "CCTV Surveillance Systems",
+    cctvDesc: "Professional-grade surveillance solutions designed for residential, commercial, and industrial environments. Our systems deliver crystal-clear footage with intelligent analytics.",
+    cctvB1: "24/7 Monitoring",
+    cctvB2: "Remote Viewing",
+    cctvB3: "Night Vision",
+    cctvB4: "Smart Detection",
+    cctvLive: "Live Monitoring Active",
+    smartLabel: "02 — Automation",
+    smartTitle: "Smart Home Automation",
+    smartDesc: "Transform your living space into an intelligent environment. Control lighting, climate, curtains, and security from a single elegant interface.",
+    smartB1: "Comfort",
+    smartB2: "Convenience",
+    smartB3: "Energy Efficiency",
+    smartB4: "Modern Living",
+    smartStatus: "System Active",
+    intercomLabel: "03 — Communication",
+    intercomTitle: "Video Intercom Systems",
+    intercomDesc: "See, speak, and grant access to visitors from anywhere. Our premium video intercom solutions combine elegant design with powerful functionality.",
+    intercomB1: "See Visitors",
+    intercomB2: "Speak Instantly",
+    intercomB3: "Remote Access",
+    intercomB4: "Enhanced Security",
+    accessLabel: "04 — Access Control",
+    accessTitle: "Access Control Systems",
+    accessDesc: "Advanced biometric and card-based access solutions that give you complete control over who enters your premises, with detailed audit trails.",
+    accessB1: "Controlled Entry",
+    accessB2: "Visitor Management",
+    accessB3: "Attendance Tracking",
+    accessB4: "Advanced Security",
+    fireLabel: "05 — Safety",
+    fireTitle: "Fire Alarm Systems",
+    fireDesc: "Life-saving fire detection and alarm systems engineered for early warning and rapid response. Protecting lives and property with certified solutions.",
+    fireB1: "Early Detection",
+    fireB2: "Fast Alerts",
+    fireB3: "Life Safety",
+    fireB4: "Property Protection",
+    networkLabel: "06 — Connectivity",
+    networkTitle: "Networking & WiFi Solutions",
+    networkDesc: "Enterprise-grade networking infrastructure designed for reliability and performance. From structured cabling to wireless coverage, we build the foundation of your digital operations.",
+    networkB1: "Reliable Connectivity",
+    networkB2: "Enterprise WiFi",
+    networkB3: "Structured Cabling",
+    networkB4: "High-Speed Performance",
+    whyLabel: "Why SmartTech",
+    whyTitle: "Why Choose SmartTech",
+    whyDesc: "We deliver excellence at every stage — from initial consultation to ongoing support.",
+    why1Title: "Professional Installation",
+    why1Desc: "Certified technicians with years of experience delivering flawless installations.",
+    why2Title: "Quality Products",
+    why2Desc: "Premium equipment from globally trusted brands with full warranty coverage.",
+    why3Title: "Reliable Support",
+    why3Desc: "Dedicated support team available to assist you whenever you need us.",
+    why4Title: "Customized Solutions",
+    why4Desc: "Tailored designs that perfectly match your specific requirements and environment.",
+    why5Title: "Latest Technology",
+    why5Desc: "Cutting-edge systems that keep you ahead with the most advanced features.",
+    why6Title: "Customer Satisfaction",
+    why6Desc: "Your satisfaction is our priority — measured by lasting relationships and referrals.",
+    indLabel: "Industries",
+    indTitle: "Industries We Serve",
+    indDesc: "Comprehensive CCTV and security solutions tailored for diverse sectors and business needs",
+    ind1Icon: "🏢",
+    ind1: "Commercial & Corporate Offices",
+    ind1Desc: "Advanced surveillance for office complexes, ensuring employee safety and asset protection with 24/7 monitoring.",
+    ind2Icon: "🛍️",
+    ind2: "Retail & Shopping Centers",
+    ind2Desc: "Prevent theft and ensure customer safety with strategically placed cameras and real-time monitoring systems.",
+    ind3Icon: "🏠",
+    ind3: "Residential Villas & Apartments",
+    ind3Desc: "Protect your home and loved ones with discreet yet powerful surveillance solutions for residential properties.",
+    ind4Icon: "🏭",
+    ind4: "Industrial & Warehouses",
+    ind4Desc: "Heavy-duty security systems for industrial facilities, monitoring equipment, inventory, and ensuring workplace safety.",
+    ind5Icon: "🎓",
+    ind5: "Schools & Educational Institutions",
+    ind5Desc: "Safeguard students and staff with comprehensive surveillance covering classrooms, corridors, and campus perimeters.",
+    ind6Icon: "🏥",
+    ind6: "Hospitals & Healthcare Facilities",
+    ind6Desc: "Critical surveillance for medical facilities ensuring patient safety, asset protection, and regulatory compliance.",
+    ind7Icon: "🏨",
+    ind7: "Hotels & Hospitality",
+    ind7Desc: "Ensure guest safety and property security with discreet monitoring of common areas and critical zones.",
+    ind8Icon: "🏗️",
+    ind8: "Construction Sites",
+    ind8Desc: "Protect valuable equipment and materials with rugged, weatherproof surveillance suitable for outdoor construction environments.",
+    quoteLabel: "Get Started",
+    quoteTitle: "Request a Quote",
+    quoteDesc: "Tell us about your project. Our team will respond within 24 hours with a customized proposal tailored to your needs.",
+    quoteCall: "Call us directly",
+    quoteEmail: "Email us",
+    quoteWhatsapp: "WhatsApp",
+    formName: "Name",
+    formNamePh: "Your full name",
+    formPhone: "Phone Number",
+    formPhonePh: "+966 5X XXX XXXX",
+    formEmail: "Email",
+    formEmailPh: "your@email.com",
+    formService: "Service Required",
+    formServicePh: "Select a service",
+    optCctv: "CCTV Surveillance",
+    optSmart: "Smart Home Automation",
+    optIntercom: "Video Intercom",
+    optAccess: "Access Control",
+    optGate: "Automatic Gate Systems",
+    optFire: "Fire Alarm Systems",
+    optNetwork: "Networking & WiFi",
+    formLocation: "Location",
+    formLocationPh: "City / Area",
+    formMessage: "Message",
+    formMessagePh: "Tell us about your project...",
+    formSubmit: "Submit Request",
+    formSuccess: "Thank you! We'll contact you within 24 hours.",
+    contactLabel: "Contact",
+    contactTitle: "Get in Touch",
+    contactDesc: "Visit us, call us, or send a message — we're here to help.",
+    contactLocTitle: "Location",
+    contactLoc: "Dammam, Saudi Arabia",
+    contactPhoneTitle: "Phone",
+    contactEmailTitle: "Email",
+    clientsLabel: "Trusted Partners",
+    clientsTitle: "Our Clients",
+    clientsDesc: "We proudly serve leading organizations across various sectors in Saudi Arabia and beyond.",
+    client1Name: "Nesto Hypermarket",
+    client1Place: "Dammam, Saudi Arabia",
+    client2Name: "Client Name 2",
+    client2Place: "Jeddah, Saudi Arabia",
+    client3Name: "Client Name 3",
+    client3Place: "Dammam, Saudi Arabia",
+    client4Name: "Client Name 4",
+    client4Place: "Eastern Region",
+    client5Name: "Client Name 5",
+    client5Place: "Makkah, Saudi Arabia",
+    client6Name: "Client Name 6",
+    client6Place: "Medina, Saudi Arabia",
+    client7Name: "Client Name 7",
+    client7Place: "Alkhobar, Saudi Arabia",
+    client8Name: "Client Name 8",
+    client8Place: "Abha, Saudi Arabia",
+    footerTagline: "Protect What Matters Most — Advanced Security & Smart Technology Solutions across Saudi Arabia.",
+    footerLinks: "Quick Links",
+    footerServices: "Services",
+    footerContact: "Contact",
+    footerRights: "All rights reserved.",
+    footerMade: "Made with precision in Dammam, Saudi Arabia"
+  },
+  ar: {
+    companyName: "سمارت تك",
+    companySub: "للحلول الأمنية",
+    navHome: "الرئيسية",
+    navServices: "الخدمات",
+    navWhy: "لماذا نحن",
+    navIndustries: "القطاعات",
+    navClients: "العملاء",
+    navContact: "اتصل بنا",
+    navQuote: "طلب عرض سعر",
+    heroLabel: "شريكك الأمني الموثوق في المملكة العربية السعودية",
+    heroTitle1: "نحمي ما",
+    heroTitle2: "يهمك أكثر",
+    heroSubtitle: "حلول أمنية متقدمة وتقنيات ذكية",
+    heroCta1: "طلب عرض سعر",
+    heroCta2: "تواصل معنا",
+    heroCta3: "واتساب",
+    statProjects: "مشروع منجز",
+    statSupport: "/7 دعم متواصل",
+    statClients: "عميل راضٍ",
+    cctvLabel: "٠١ — المراقبة",
+    cctvTitle: "أنظمة كاميرات المراقبة",
+    cctvDesc: "حلول مراقبة احترافية مصممة للبيئات السكنية والتجارية والصناعية. أنظمةنا توفر لقطات عالية الوضوح مع تحليلات ذكية.",
+    cctvB1: "مراقبة على مدار الساعة",
+    cctvB2: "عرض عن بُعد",
+    cctvB3: "رؤية ليلية",
+    cctvB4: "كشف ذكي",
+    cctvLive: "المراقبة المباشرة نشطة",
+    smartLabel: "٠٢ — الأتمتة",
+    smartTitle: "أتمتة المنزل الذكي",
+    smartDesc: "حوّل مسكنك إلى بيئة ذكية. تحكم في الإضاءة والمناخ والستائر والأمان من واجهة واحدة أنيقة.",
+    smartB1: "راحة",
+    smartB2: "سهولة",
+    smartB3: "كفاءة الطاقة",
+    smartB4: "حياة عصرية",
+    smartStatus: "النظام نشط",
+    intercomLabel: "٠ — التواصل",
+    intercomTitle: "أنظمة الإنتركم المرئي",
+    intercomDesc: "شاهد وتحدث وامنح الوصول للزوار من أي مكان. حلولنا تجمع بين التصميم الأنيق والوظائف القوية.",
+    intercomB1: "رؤية الزوار",
+    intercomB2: "تحدث فوري",
+    intercomB3: "وصول عن بُعد",
+    intercomB4: "أمان معزز",
+    accessLabel: "٠٤ — التحكم بالوصول",
+    accessTitle: "أنظمة التحكم بالوصول",
+    accessDesc: "حلول وصول متقدمة بالبيومترية والبطاقات تمنحك تحكماً كاملاً في من يدخل منشأتك مع سجلات تدقيق مفصلة.",
+    accessB1: "دخول متحكم به",
+    accessB2: "إدارة الزوار",
+    accessB3: "تتبع الحضور",
+    accessB4: "أمان متقدم",
+    fireLabel: "٠٥ — السلامة",
+    fireTitle: "أنظمة إنذار الحريق",
+    fireDesc: "أنظمة كشف وإنذار حريق مصممة للإنذار المبكر والاستجابة السريعة. نحمي الأرواح والممتلكات بحلول معتمدة.",
+    fireB1: "كشف مبكر",
+    fireB2: "تنبيهات سريعة",
+    fireB3: "سلامة الأرواح",
+    fireB4: "حماية الممتلكات",
+    networkLabel: "٠٦ — الاتصال",
+    networkTitle: "حلول الشبكات والواي فاي",
+    networkDesc: "بنية شبكات بمستوى المؤسسات مصممة للموثوقية والأداء. من الكابلات المهيكلة إلى التغطية اللاسلكية.",
+    networkB1: "اتصال موثوق",
+    networkB2: "واي فاي للمؤسسات",
+    networkB3: "كابلات مهيكلة",
+    networkB4: "أداء عالي السرعة",
+    whyLabel: "لماذا سمارت تك",
+    whyTitle: "لماذا تختار سمارت تك",
+    whyDesc: "نقدم التميز في كل مرحلة — من الاستشارة الأولية إلى الدعم المستمر.",
+    why1Title: "تركيب احترافي",
+    why1Desc: "فنيون معتمدون بسنوات من الخبرة يقدمون تركيبات مثالية.",
+    why2Title: "منتجات عالية الجودة",
+    why2Desc: "معدات فاخرة من علامات تجارية موثوقة عالمياً مع ضمان كامل.",
+    why3Title: "دعم موثوق",
+    why3Desc: "فريق دعم مخصص متاح لمساعدتك متى احتجت إلينا.",
+    why4Title: "حلول مخصصة",
+    why4Desc: "تصاميم مصممة خصيصاً لتتناسب تماماً مع متطلباتك وبيئتك.",
+    why5Title: "أحدث التقنيات",
+    why5Desc: "أنظمة متطورة تبقيك في المقدمة بأحدث الميزات.",
+    why6Title: "رضا العملاء",
+    why6Desc: "رضاك هو أولويتنا — يُقاس بعلاقات دائمة وتوصيات.",
+    indLabel: "القطاعات",
+    indTitle: "القطاعات التي نخدمها",
+    indDesc: "حلول كاميرات مراقبة وأمان شاملة مصممة لقطاعات متنوعة واحتياجات أعمال مختلفة",
+    ind1Icon: "🏢",
+    ind1: "المكاتب والشركات",
+    ind1Desc: "مراقبة متقدمة لمجمعات المكاتب، لضمان سلامة الموظفين وحماية الأصول بمراقبة 24/7.",
+    ind2Icon: "🛍️",
+    ind2: "المتاجر ومراكز التسوق",
+    ind2Desc: "منع السرقة وضمان سلامة العملاء بكاميرات موضوعة بذكاء ومراقبة فورية.",
+    ind3Icon: "🏠",
+    ind3: "الفلل والعمارات السكنية",
+    ind3Desc: "حماية منزلك والأحبة بحلول مراقبة فعالة وحساسة للمسكن السكني.",
+    ind4Icon: "🏭",
+    ind4: "المنشآت الصناعية والمستودعات",
+    ind4Desc: "أنظمة أمان قوية للمنشآت الصناعية، مراقبة المعدات والمخزون وضمان سلامة العمل.",
+    ind5Icon: "🎓",
+    ind5: "المدارس والمؤسسات التعليمية",
+    ind5Desc: "حماية الطلاب والموظفين برقابة شاملة تغطي الفصول والممرات وأسوار المدرسة.",
+    ind6Icon: "🏥",
+    ind6: "المستشفيات والمرافق الطبية",
+    ind6Desc: "مراقبة حرجة للمرافق الطبية لضمان سلامة المرضى وحماية الأصول والامتثال القانوني.",
+    ind7Icon: "🏨",
+    ind7: "الفنادق والضيافة",
+    ind7Desc: "ضمان سلامة الضيوف وأمان المممتلكات برقابة حساسة للمناطق المشتركة.",
+    ind8Icon: "🏗️",
+    ind8: "مواقع البناء والإنشاء",
+    ind8Desc: "حماية المعدات والمواد الثمينة برقابة قوية تتحمل الطقس والبيئة الخارجية.",
+    quoteLabel: "ابدأ الآن",
+    quoteTitle: "طلب عرض سعر",
+    quoteDesc: "أخبرنا عن مشروعك. سيرد فريقنا خلال 24 ساعة بعرض مخصص لاحتياجاتك.",
+    quoteCall: "اتصل بنا مباشرة",
+    quoteEmail: "راسلنا بالبريد",
+    quoteWhatsapp: "واتساب",
+    formName: "الاسم",
+    formNamePh: "الاسم الكامل",
+    formPhone: "رقم الهاتف",
+    formPhonePh: "+966 5X XXX XXXX",
+    formEmail: "البريد الإلكتروني",
+    formEmailPh: "your@email.com",
+    formService: "الخدمة المطلوبة",
+    formServicePh: "اختر خدمة",
+    optCctv: "كاميرات مراقبة",
+    optSmart: "أتمتة المنزل الذكي",
+    optIntercom: "إنتركم مرئي",
+    optAccess: "التحكم بالوصول",
+    optGate: "أنظمة البوابات التلقائية",
+    optFire: "أنظمة إنذار الحريق",
+    optNetwork: "الشبكات والواي فاي",
+    formLocation: "الموقع",
+    formLocationPh: "المدينة / المنطقة",
+    formMessage: "الرسالة",
+    formMessagePh: "أخبرنا عن مشروعك...",
+    formSubmit: "إرسال الطلب",
+    formSuccess: "شكراً لك! سنتواصل معك خلال 24 ساعة.",
+    contactLabel: "تواصل",
+    contactTitle: "تواصل معنا",
+    contactDesc: "زرنا أو اتصل بنا أو أرسل رسالة — نحن هنا للمساعدة.",
+    contactLocTitle: "الموقع",
+    contactLoc: "الدمام، المملكة العربية السعودية",
+    contactPhoneTitle: "الهاتف",
+    contactEmailTitle: "البريد الإلكتروني",
+    clientsLabel: "شركاء موثوقون",
+    clientsTitle: "عملاؤنا",
+    clientsDesc: "نخدم بفخر المنظمات الرائدة عبر قطاعات متنوعة في المملكة العربية السعودية وخارجها.",
+    client1Name: "Nesto Hypermarket",
+    client1Place: "الدمام، المملكة العربية السعودية",
+    client2Name: "اسم العميل 2",
+    client2Place: "جدة، المملكة العربية السعودية",
+    client3Name: "اسم العميل 3",
+    client3Place: "الدمام، المملكة العربية السعودية",
+    client4Name: "اسم العميل 4",
+    client4Place: "المنطقة الشرقية",
+    client5Name: "اسم العميل 5",
+    client5Place: "مكة، المملكة العربية السعودية",
+    client6Name: "اسم العميل 6",
+    client6Place: "المدينة، المملكة العربية السعودية",
+    client7Name: "اسم العميل 7",
+    client7Place: "الخبر، المملكة العربية السعودية",
+    client8Name: "اسم العميل 8",
+    client8Place: "أبها، المملكة العربية السعودية",
+    footerTagline: "نحمي ما يهمك أكثر — حلول أمنية متقدمة وتقنيات ذكية في جميع أنحاء المملكة العربية السعودية.",
+    footerLinks: "روابط سريعة",
+    footerServices: "الخدمات",
+    footerContact: "اتصل بنا",
+    footerRights: "جميع الحقوق محفوظة.",
+    footerMade: "صُنع بدقة في الدمام، المملكة العربية السعودية"
+  }
+};
+
+// LANGUAGE DETECTION
+let currentLang = 'en';
+function setLanguage(lang) {
+  currentLang = lang;
+  const isRtl = lang === 'ar';
+  document.documentElement.lang = lang;
+  document.documentElement.dir = isRtl ? 'rtl' : 'ltr';
+  document.body.classList.toggle('rtl', isRtl);
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang][key]) el.textContent = translations[lang][key];
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (translations[lang][key]) el.placeholder = translations[lang][key];
+  });
+  document.querySelectorAll('.lang-switch').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+  });
+  localStorage.setItem('smarttech-lang', lang);
+}
+
+function detectLanguage() {
+  const saved = localStorage.getItem('smarttech-lang');
+  if (saved) return saved;
+  const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+  if (browserLang.startsWith('ar')) return 'ar';
+  return 'en';
+}
+
+// INIT
+document.addEventListener('DOMContentLoaded', () => {
+  setLanguage(detectLanguage());
+
+  // Lang switchers
+  document.querySelectorAll('.lang-switch').forEach(btn => {
+    btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang')));
+  });
+
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('glass');
+      navbar.style.boxShadow = '0 4px 30px rgba(10,37,64,0.08)';
+    } else {
+      navbar.classList.remove('glass');
+      navbar.style.boxShadow = 'none';
+    }
+  });
+
+  // Mobile menu
+  const mobileMenu = document.getElementById('mobileMenu');
+  document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+    mobileMenu.classList.add('open');
+  });
+  document.getElementById('closeMobileMenu').addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+  });
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+
+  // Hero particles
+  const particlesContainer = document.getElementById('heroParticles');
+  for (let i = 0; i < 20; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.top = (100 + Math.random() * 20) + '%';
+    particle.style.animationDelay = Math.random() * 8 + 's';
+    particle.style.animationDuration = (6 + Math.random() * 6) + 's';
+    particlesContainer.appendChild(particle);
+  }
+
+  // Fade animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.fade-up, .fade-left, .fade-right, .scale-in').forEach(el => observer.observe(el));
+
+  // Counter animation
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.getAttribute('data-target'));
+        let current = 0;
+        const increment = target / 60;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            el.textContent = target + '+';
+            clearInterval(timer);
+          } else {
+            el.textContent = Math.floor(current);
+          }
+        }, 30);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.counter-value').forEach(el => counterObserver.observe(el));
+
+  // Form submission
+  document.getElementById('quoteForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.getElementById('formSuccess').classList.remove('hidden');
+    e.target.reset();
+    setTimeout(() => {
+      document.getElementById('formSuccess').classList.add('hidden');
+    }, 5000);
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
+
