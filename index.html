@@ -1505,16 +1505,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.5 });
   document.querySelectorAll('.counter-value').forEach(el => counterObserver.observe(el));
 
-  // Form submission
-  document.getElementById('quoteForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    document.getElementById('formSuccess').classList.remove('hidden');
-    e.target.reset();
-    setTimeout(() => {
-      document.getElementById('formSuccess').classList.add('hidden');
-    }, 5000);
-  });
-
+ 
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
