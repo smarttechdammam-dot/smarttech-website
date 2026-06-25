@@ -234,9 +234,18 @@
     100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
   }
   .clients-carousel {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  width: 100%;
+  scroll-behavior: smooth;
+
+  cursor: grab;
+     -webkit-overflow-scrolling: touch;
+  }
+
+.clients-carousel:active {
+  cursor: grabbing;
   }
   .clients-carousel::before {
     content: '';
@@ -261,16 +270,9 @@
     pointer-events: none;
   }
   .clients-track {
-    display: flex;
-    gap: 24px;
-    animation: scroll-clients 40s linear infinite;
-  }
-  @keyframes scroll-clients {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-100% / 2)); }
-  }
-  .clients-track:hover {
-    animation-play-state: paused;
+  display: flex;
+  gap: 24px;
+  width: max-content;
   }
   .client-card {
     flex: 0 0 280px;
@@ -1552,6 +1554,68 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
+  
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  const slider = document.querySelector('.clients-carousel');
+
+  if (!slider) return;
+
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  // AUTO SCROLL
+  let speed = 0.8;
+
+function autoScroll() {
+  if (!isDown) {
+    slider.scrollLeft += speed;
+
+    if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+      slider.scrollLeft = 0;
+    }
+  }
+
+  requestAnimationFrame(autoScroll);
+}
+  autoScroll();
+
+  // MOUSE DRAG
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener('mouseup', () => isDown = false);
+  slider.addEventListener('mouseleave', () => isDown = false);
+
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2;
+    slider.scrollLeft = scrollLeft - walk;
+  });
+
+  // TOUCH SWIPE
+  slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].pageX;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener('touchmove', (e) => {
+    const x = e.touches[0].pageX;
+    const walk = (x - startX) * 2;
+    slider.scrollLeft = scrollLeft - walk;
+  });
+
+});
+</script>
+
+  
 </body>
 </html>
 
