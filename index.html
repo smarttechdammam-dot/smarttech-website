@@ -505,12 +505,14 @@ body.rtl .mobile-menu.open {
         </div>
         <div>
           <div class="counter-value font-display text-3xl md:text-4xl text-white" data-target="24">0</div>
-          <div class="text-white/70 text-sm mt-1" data-i18n="statSupport">/7 Support</div>
+          <div class="text-white/70 text-sm mt-1" data-i18n="statSupport">Support</div>
         </div>
         <div>
           <div class="counter-value font-display text-3xl md:text-4xl text-white" data-target="100">0</div>
           <div class="text-white/70 text-sm mt-1" data-i18n="statClients">Satisfied Clients</div>
         </div>
+        <div class="counter-value font-display text-3xl md:text-4xl text-white">10+</div>
+        <div class="text-white/70 text-sm mt-1" data-i18n="yearsService">Years of Service</div>
       </div>
     </div>
   </div>
@@ -1127,8 +1129,9 @@ const translations = {
     heroCta2: "Contact Us",
     heroCta3: "WhatsApp Us",
     statProjects: "Projects Delivered",
-    statSupport: "/7 Support",
+    statSupport: "24/7 Support",
     statClients: "Satisfied Clients",
+    yearsService: "Years of Experience",
     cctvLabel: "01 — Surveillance",
     cctvTitle: "CCTV Surveillance Systems",
     cctvDesc: "Professional-grade surveillance solutions designed for residential, commercial, and industrial environments. Our systems deliver crystal-clear footage with intelligent analytics.",
@@ -1293,8 +1296,9 @@ const translations = {
     heroCta2: "تواصل معنا",
     heroCta3: "واتساب",
     statProjects: "مشروع منجز",
-    statSupport: "/7 دعم متواصل",
+    statSupport: "دعم 24/7",
     statClients: "عميل راضٍ",
+    yearsService: "سنوات من الخبرة",
     cctvLabel: "٠١ — المراقبة",
     cctvTitle: "أنظمة كاميرات المراقبة",
     cctvDesc: "حلول مراقبة احترافية مصممة للبيئات السكنية والتجارية والصناعية. أنظمةنا توفر لقطات عالية الوضوح مع تحليلات ذكية.",
@@ -1529,27 +1533,36 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.fade-up, .fade-left, .fade-right, .scale-in').forEach(el => observer.observe(el));
 
   // Counter animation
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const target = parseInt(el.getAttribute('data-target'));
-        let current = 0;
-        const increment = target / 60;
-        const timer = setInterval(() => {
-          current += increment;
-          if (current >= target) {
-            el.textContent = target + '+';
-            clearInterval(timer);
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.getAttribute('data-target'));
+      let current = 0;
+      const increment = target / 60;
+
+      const timer = setInterval(() => {
+        current += increment;
+
+        if (current >= target) {
+          // Custom display for each counter
+          if (target === 24) {
+            el.textContent = "24/7";
           } else {
-            el.textContent = Math.floor(current);
+            el.textContent = target + "+";
           }
-        }, 30);
-        counterObserver.unobserve(el);
-      }
-    });
-  }, { threshold: 0.5 });
-  document.querySelectorAll('.counter-value').forEach(el => counterObserver.observe(el));
+          clearInterval(timer);
+        } else {
+          el.textContent = Math.floor(current);
+        }
+      }, 30);
+
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.counter-value[data-target]').forEach(el => counterObserver.observe(el));
 
  
   // Smooth scroll for anchor links
