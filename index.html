@@ -202,8 +202,21 @@
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
   body.rtl .mobile-menu { right: auto; left: 0; transform: translateX(-100%); }
-  .mobile-menu.open { transform: translateX(0); }
-  .mobile-menu.open body.rtl { transform: translateX(0); }
+  .mobile-menu.open {
+    transform: translateX(0);
+}
+
+body.rtl .mobile-menu.open {
+    transform: translateX(0);
+}
+  #mobileMenuBtn {
+    position: relative;
+    z-index: 9999;
+}
+
+#mobileMenu {
+    z-index: 9998;
+}
   .scroll-indicator {
     position: absolute;
     bottom: 40px;
@@ -425,11 +438,13 @@
         </div>
         <a href="#quote" class="btn-primary px-6 py-3 rounded-lg text-sm font-semibold" data-i18n="navQuote">Request Quote</a>
       </div>
-      <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 flex items-center justify-center">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2">
-          <path d="M3 6h18M3 12h18M3 18h18"/>
-        </svg>
-      </button>
+      <button
+    id="mobileMenuBtn"
+    class="lg:hidden w-10 h-10 flex items-center justify-center relative z-50">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2">
+        <path d="M3 6h18M3 12h18M3 18h18"/>
+    </svg>
+</button>
     </div>
   </div>
 </nav>
